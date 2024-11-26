@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Jaro", sans-serif;
+  background: linear-gradient(135deg, #d4f0e9, #f8f9fa);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border: none;
+}
+
+.divider {
+  width: 2px;
+  background-color: #2a656a;
+  height: 100%;
+}
+
+.form-section {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #d4f0e9;
+}
+
+.form-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2a656a;
+  font-weight: bold;
+}
+
+.form-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  color: #2a656a;
+}
+
+.form-group i {
+  position: absolute;
+  left: 10px;
+  top: 65%;
+  transform: translateY(-50%);
+  color: #2a656a;
+  font-size: 1.2rem;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 1px solid #2a656a;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="email"], input[type="password"], input[type="text"]:focus {
+  border-color: #1f4c54;
+}
+
+.btn-modern, .btn-signup {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #349f89;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-modern:hover, .btn-signup:hover {
+  background-color: #298b77;
+  transform: scale(1.05);
+}
+
+.btn-back, .btn-create-account {
+  background-color: #2a656a;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem;
+  border-radius: 12px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back:hover, .btn-create-account:hover {
+  background-color: #1f4c54;
+  transform: scale(1.05);
+}
+
+.forgot-password {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #349f89;
+  text-decoration: none;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #298b77;
+}
+
+.map-section {
+  flex: 1;
+ 
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.map-section .logo {
+  width: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.map-title {
+  font-size: 2.5rem;
+  color: #2a656a;
+  font-family: "Jaro", sans-serif;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .form-section, .map-section {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .map-section {
+    height: 300px;
+  }
+
+  .map-section .logo {
+    width: 120px;
+  }
+}
+.animated-description {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.animated-description p {
+  font-size: 1.2rem;
+  color: #2a656a;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #2a656a;
+  animation: typing 8s steps(100, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+@media (max-width: 768px) {
+  .animated-description p {
+    font-size: 1rem;
+    animation: typing 10s steps(80, end), blink-caret 0.75s step-end infinite;
+  }
+}
+
+/* Welcome Page  */
+.welcome-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #d4f0e9;
+  font-family: "Jaro", sans-serif;
+  text-align: center;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.welcome-logo {
+  width: 200px;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite; 
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.btn-get-started {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #349f89;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-get-started:hover {
+  background-color: #298b77;
+  transform: scale(1.05); 
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); } 
+}
